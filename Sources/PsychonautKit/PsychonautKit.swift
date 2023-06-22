@@ -37,78 +37,78 @@ struct SubstanceResponse2: Codable {
 }
 
 public struct Substance: Codable {
-    var name: String
-    var roas: [AdministrationRoute]
-    var addictionPotential: String?
-    var `class`: SubstanceClass?
-    var images: [ImageLink]
-    var summary: String?
-    var tolerance: ToleranceInfo?
-    var commonNames: [String]?
-    var crossTolerances: [String]?
-    var effects: [SubstanceEffect]
-    var toxicity: [String]?
+    public var name: String
+    public var roas: [AdministrationRoute]
+    public var addictionPotential: String?
+    public var `class`: SubstanceClass?
+    public var images: [ImageLink]
+    public var summary: String?
+    public var tolerance: ToleranceInfo?
+    public var commonNames: [String]?
+    public var crossTolerances: [String]?
+    public var effects: [SubstanceEffect]
+    public var toxicity: [String]?
 }
 
 public struct SubstanceEffect: Codable {
-    var name: String
-    var url: String
+    public var name: String
+    public var url: String
 }
 
 public struct ToleranceInfo: Codable {
-    var full: String?
-    var half: String?
-    var zero: String?
+    public var full: String?
+    public var half: String?
+    public var zero: String?
 }
 
 public struct AdministrationRoute: Codable {
-    var name: String
-    var dose: DosageInfo?
-    var duration: DurationInfo
-    var bioavailability: Bioavailability?
+    public var name: String
+    public var dose: DosageInfo?
+    public var duration: DurationInfo
+    public var bioavailability: Bioavailability?
 }
 
 public struct SubstanceClass: Codable {
-    var chemical: [String]?
-    var psychoactive: [String]?
+    public var chemical: [String]?
+    public var psychoactive: [String]?
 }
 
 public struct ImageLink: Codable {
-    var image: String
+    public var image: String
 }
 
 public struct DosageInfo: Codable {
-    var units: String
-    var threshold: Float?
-    var heavy: Float?
-    var common: DosageAmount?
-    var light: DosageAmount?
-    var strong: DosageAmount?
+    public var units: String
+    public var threshold: Float?
+    public var heavy: Float?
+    public var common: DosageAmount?
+    public var light: DosageAmount?
+    public var strong: DosageAmount?
 }
 
 public struct DosageAmount: Codable {
-    var min: Float
-    var max: Float
+    public var min: Float
+    public var max: Float
 }
 
 public struct Bioavailability: Codable {
-    var min: Float
-    var max: Float
+    public var min: Float
+    public var max: Float
 }
 
 public struct DurationInfo: Codable {
-    var afterglow: Duration?
-    var comeup: Duration?
-    var offset: Duration?
-    var onset: Duration?
-    var peak: Duration?
-    var total: Duration?
+    public var afterglow: Duration?
+    public var comeup: Duration?
+    public var offset: Duration?
+    public var onset: Duration?
+    public var peak: Duration?
+    public var total: Duration?
 }
 
 public struct Duration: Codable {
-    var min: Float?
-    var max: Float?
-    var units: String
+    public var min: Float?
+    public var max: Float?
+    public var units: String
 }
 
 struct POSTData: Codable {
