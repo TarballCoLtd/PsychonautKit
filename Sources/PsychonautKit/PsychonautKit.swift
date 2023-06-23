@@ -87,8 +87,8 @@ public struct DosageInfo: Codable, Hashable {
 }
 
 public struct DosageAmount: Codable, Hashable {
-    public var min: Float
-    public var max: Float
+    public var min: Float?
+    public var max: Float?
 }
 
 public struct Bioavailability: Codable, Hashable {
