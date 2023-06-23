@@ -61,7 +61,7 @@ public struct ToleranceInfo: Codable {
     public var zero: String?
 }
 
-public struct AdministrationRoute: Codable {
+public struct AdministrationRoute: Codable, Hashable {
     public var name: String
     public var dose: DosageInfo?
     public var duration: DurationInfo
@@ -77,7 +77,7 @@ public struct ImageLink: Codable {
     public var image: String
 }
 
-public struct DosageInfo: Codable {
+public struct DosageInfo: Codable, Hashable {
     public var units: String
     public var threshold: Float?
     public var heavy: Float?
@@ -86,17 +86,17 @@ public struct DosageInfo: Codable {
     public var strong: DosageAmount?
 }
 
-public struct DosageAmount: Codable {
+public struct DosageAmount: Codable, Hashable {
     public var min: Float
     public var max: Float
 }
 
-public struct Bioavailability: Codable {
+public struct Bioavailability: Codable, Hashable {
     public var min: Float
     public var max: Float
 }
 
-public struct DurationInfo: Codable {
+public struct DurationInfo: Codable, Hashable {
     public var afterglow: Duration?
     public var comeup: Duration?
     public var offset: Duration?
@@ -105,7 +105,7 @@ public struct DurationInfo: Codable {
     public var total: Duration?
 }
 
-public struct Duration: Codable {
+public struct Duration: Codable, Hashable {
     public var min: Float?
     public var max: Float?
     public var units: String
