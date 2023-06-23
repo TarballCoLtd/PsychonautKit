@@ -73,7 +73,7 @@ public struct SubstanceClass: Codable {
     public var psychoactive: [String]?
 }
 
-public struct ImageLink: Codable {
+public struct ImageLink: Codable, Hashable {
     public var image: String
 }
 
